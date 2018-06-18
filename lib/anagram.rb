@@ -1,4 +1,3 @@
-# Your code goes here!
 class Anagram
 attr_accessor :word
 
@@ -7,11 +6,11 @@ def initialize(word)
 end
 
 def match(words)
-  match = ""
-  words.each do |word| 
-    if word.sort == @word.sort  
-      match =	word
-    end
+  match = []
+  words.each do |i| 
+   if i.chars.sort.join == word.chars.sort.join
+    match << i
+   end
   end
 
   match
